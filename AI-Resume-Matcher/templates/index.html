@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Matcher</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="bg-bubbles">
+        <span>💼</span>
+        <span>📄</span>
+        <span>🤖</span>
+        <span>✨</span>
+        <span>🧠</span>
+    </div>
+
+    <div class="container">
+        <div class="card cartoon-card">
+            <div class="hero-icon">🤖</div>
+            <h1>AI Resume Matcher</h1>
+            <p class="subtitle">Upload your resume and let the smart bot find your job match!</p>
+
+            <form action="/match" method="post" enctype="multipart/form-data">
+                <label>📄 Upload Resume (PDF)</label>
+                <input type="file" name="resume" required>
+
+                <label>💼 Job Description</label>
+                <textarea name="job_description" rows="10" placeholder="Paste job description here..." required></textarea>
+
+                <button type="submit">✨ Match My Resume</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
